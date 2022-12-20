@@ -56,7 +56,7 @@ async def predict (request: Request, rawtext: str = Form(...)):
     else:
         #return " No review found! Please enter a review."
         #rawtext ="There is no text to select"
-        return templates.TemplateResponse('predict.html',{"request": request, "rawtext": " No review found. Please enter a review!", "result": "No condition can be predicted!.","top_Drugs": "-" })
+        return templates.TemplateResponse('predict.html',{"request": request, "rawtext": " No review found. Please enter a review!", "result": "No condition can be predicted!","top_Drugs": " " })
 
     
 
