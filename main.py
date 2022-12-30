@@ -93,3 +93,6 @@ def topDrugs(condition, df):
     # get drug names of the condition and select the top 3
     top_Drugs = df_sort[df_sort.condition == condition]["drugName"].head(3).tolist()
     return top_Drugs
+
+if __name__ == "__main__":   
+    uvicorn.run("main:app", host="0.0.0.0", port=8080)
